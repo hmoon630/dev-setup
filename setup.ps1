@@ -26,9 +26,10 @@ Register-ArgumentCompleter -Native -CommandName aws -ScriptBlock {
 # Reload PATH env variable
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
-# # Install vscode extensions
-# code --install-extension redhat.vscode-yaml `
-#     --install-extension ms-python.python `
-#     --install-extension boto3typed.boto3-ide `
-#     --install-extension kddejong.vscode-cfn-lint
-# python -m pip install cfn-lint
+# Install vscode extensions
+code --install-extension redhat.vscode-yaml `
+    --install-extension ms-python.python `
+    --install-extension boto3typed.boto3-ide `
+    --install-extension kddejong.vscode-cfn-lint `
+    --install-extension ms-vscode-remote.remote-ssh
+python -m pip install cfn-lint
